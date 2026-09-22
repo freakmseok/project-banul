@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>바늘공주Forest Kim ㅣ 손뜨개와 물속 정원의 유튜브 채널</title>
+<meta name="description" content="실 한 타래와 바늘 한 쌍으로 완성하는 옷, 가방, 그리고 물속 정원. 코바늘·대바늘 손뜨개부터 수초가꾸기까지 — 바늘공주의 포레스트 김 채널 소개 페이지.">
+<meta name="theme-color" content="#faf6f0">
+<meta property="og:type" content="website">
+<meta property="og:title" content="바늘공주Forest Kim">
+<meta property="og:description" content="알 럽 핸드메이드~♡ 손으로 만드는 것을 넘나 사랑하는 바늘공주의 포레스트 김입니다.">
+<meta property="og:image" content="https://i.ytimg.com/vi/6r8SecdkuEA/maxresdefault.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://i.ytimg.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+
+<style>
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root{
+  --cream:#faf6f0;
+  --cream-2:#f2ebdf;
+  --cream-3:#ebe2d3;
+  --ink:#211a15;
+  --ink-2:#4a403a;
+  --ink-3:#7a6e65;
+  --rose:#c4574f;
+  --rose-deep:#93382f;
+  --sage:#7f8f6f;
+  --gold:#c1963f;
+  --dark:#17120f;
+  --dark-2:#211a15;
+  --line:rgba(33,26,21,.12);
+
+  --font-display:"Playfair Display","Gowun Batang",Georgia,serif;
+  --font-serif:"Gowun Batang","Playfair Display",Georgia,serif;
+  --font-sans:"Pretendard","Pretendard Variable",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --font-mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+
+  --knit:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='24' viewBox='0 0 36 24'%3E%3Cg fill='none' stroke='%23211a15' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 1 9 11 16 1'/%3E%3Cpath d='M20 1 27 11 34 1'/%3E%3Cpath d='M-7 12 0 22 7 12'/%3E%3Cpath d='M11 12 18 22 25 12'/%3E%3Cpath d='M29 12 36 22 43 12'/%3E%3C/g%3E%3C/svg%3E");
+
+  --shell:min(1200px, calc(100% - 3rem));
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--cream);color:var(--ink);
+  font-family:var(--font-sans);font-size:17px;line-height:1.7;
+  font-weight:400;letter-spacing:-.01em;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3,h4{margin:0;font-weight:700;line-height:1.25;letter-spacing:-.03em}
+p{margin:0}
+section{scroll-margin-top:84px}
+::selection{background:var(--rose);color:#fff}
+
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:4px}
+
+.container{width:var(--shell);margin-inline:auto}
+.knit{position:absolute;inset:0;background-image:var(--knit);background-size:36px 24px;opacity:.055;pointer-events:none}
+.knit--dark{filter:invert(1);opacity:.07}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:.7rem 1.1rem;z-index:200}
+.skip:focus{left:12px;top:12px}
+
+/* ============================================================
+   SCROLL PROGRESS
+   ============================================================ */
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;z-index:90;background:transparent}
+.progress__bar{height:100%;width:0;background:linear-gradient(90deg,var(--rose),var(--gold));transition:width .1s linear}
+
+/* ============================================================
+   NAV
+   ============================================================ */
+.nav{position:fixed;top:0;left:0;right:0;z-index:80;transition:background .4s var(--ease),box-shadow .4s var(--ease),border-color .4s}
+.nav::after{content:"";position:absolute;inset:0;border-bottom:1px solid transparent;pointer-events:none;transition:border-color .4s}
+.nav.is-stuck{background:rgba(250,246,240,.82);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4)}
+.nav.is-stuck::after{border-bottom-color:var(--line)}
+.nav__bar{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1.05rem 0}
+.brand{display:flex;align-items:center;gap:.6rem;font-family:var(--font-serif);font-weight:700;font-size:1.18rem;letter-spacing:-.04em}
+.brand__mark{width:30px;height:30px;color:var(--rose);flex:none;animation:spin 26s linear infinite}
+.brand small{display:block;font-family:var(--font-mono);font-size:.55rem;letter-spacing:.28em;color:var(--ink-3);font-weight:400;margin-top:-2px}
+.nav__links{display:flex;align-items:center;gap:2.1rem;font-size:.93rem;font-weight:500}
+.nav__links a{position:relative;padding:.2rem 0;color:var(--ink-2)}
+.nav__links a::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1.5px;background:var(--rose);transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease)}
+.nav__links a:hover{color:var(--ink)}
+.nav__links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav__cta{display:flex;align-items:center;gap:.7rem}
+.nav__toggle{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;place-items:center}
+.nav__toggle span{display:block;width:16px;height:1.5px;background:var(--ink);position:relative;transition:.3s}
+.nav__toggle span::before,.nav__toggle span::after{content:"";position:absolute;left:0;width:16px;height:1.5px;background:var(--ink);transition:.3s}
+.nav__toggle span::before{top:-5px}.nav__toggle span::after{top:5px}
+.nav.is-open .nav__toggle span{background:transparent}
+.nav.is-open .nav__toggle span::before{top:0;transform:rotate(45deg)}
+.nav.is-open .nav__toggle span::after{top:0;transform:rotate(-45deg)}
+
+/* ============================================================
+   BUTTONS / CHIPS
+   ============================================================ */
+.btn{
+  display:inline-flex;align-items:center;gap:.55rem;
+  padding:.92rem 1.6rem;border-radius:999px;
+  font-size:.95rem;font-weight:600;letter-spacing:-.02em;
+  transition:transform .4s var(--ease),background .3s,color .3s,box-shadow .4s,border-color .3s;
+  white-space:nowrap;
+}
+.btn svg{width:16px;height:16px;flex:none;transition:transform .4s var(--ease)}
+.btn:hover{transform:translateY(-3px)}
+.btn:hover svg{transform:translateX(4px)}
+.btn--primary{background:var(--ink);color:var(--cream);box-shadow:0 10px 30px -14px rgba(33,26,21,.75)}
+.btn--primary:hover{background:var(--rose);box-shadow:0 16px 34px -14px rgba(196,87,79,.7)}
+.btn--yt{background:#ff0033;color:#fff;box-shadow:0 10px 30px -14px rgba(255,0,51,.85)}
+.btn--yt:hover{background:#e6002e}
+.btn--ghost{border:1.5px solid var(--line);color:var(--ink);background:rgba(255,255,255,.4)}
+.btn--ghost:hover{border-color:var(--ink);background:#fff}
+.btn--light{background:var(--cream);color:var(--ink)}
+.btn--light:hover{background:#fff}
+.btn--outline-light{border:1.5px solid rgba(250,246,240,.3);color:var(--cream)}
+.btn--outline-light:hover{border-color:var(--cream);background:rgba(250,246,240,.08)}
+.btn--sm{padding:.6rem 1.1rem;font-size:.85rem}
+
+.chip{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font-family:var(--font-mono);font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--ink-3);
+}
+.chip .dot{width:6px;height:6px;border-radius:50%;background:var(--rose);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.75)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ============================================================
+   SECTION HEADS
+   ============================================================ */
+.sec{position:relative;padding:clamp(4.5rem,9vw,8rem) 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:3rem}
+.sec-head__num{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.3em;color:var(--rose);display:block;margin-bottom:1rem}
+.sec-head h2{font-family:var(--font-serif);font-size:clamp(2rem,4.4vw,3.3rem);letter-spacing:-.045em}
+.sec-head h2 em{font-style:normal;color:var(--rose)}
+.sec-head p{max-width:46ch;color:var(--ink-3);font-size:1rem;margin-top:.9rem}
+.link-more{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;font-weight:600;color:var(--ink);border-bottom:1.5px solid var(--rose);padding-bottom:.25rem;transition:gap .35s var(--ease)}
+.link-more:hover{gap:.95rem}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;min-height:100svh;display:grid;place-items:center;
+  padding:8.5rem 0 5rem;overflow:hidden;text-align:center;
+  background:
+    radial-gradient(58% 46% at 14% 18%,rgba(196,87,79,.13),transparent 70%),
+    radial-gradient(46% 42% at 86% 26%,rgba(193,150,63,.16),transparent 70%),
+    radial-gradient(70% 55% at 50% 104%,rgba(127,143,111,.18),transparent 72%),
+    var(--cream);
+}
+.hero__inner{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center}
+.hero__eyebrow{
+  font-family:var(--font-mono);font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--ink-3);display:inline-flex;align-items:center;gap:.7rem;margin-bottom:1.8rem;
+  padding:.5rem 1.1rem;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.5);
+  backdrop-filter:blur(6px);
+}
+.hero__title{
+  font-family:var(--font-display);font-weight:700;
+  font-size:clamp(4rem,17vw,13rem);line-height:.92;letter-spacing:-.055em;
+  position:relative;
+}
+.hero__title .accent{color:var(--rose);position:relative;display:inline-block}
+.hero__title .accent::after{
+  content:"";position:absolute;left:.04em;right:.04em;bottom:.06em;height:.09em;
+  background:var(--gold);border-radius:2px;transform:scaleX(0);transform-origin:left;
+  animation:swash 1.1s .75s var(--ease) forwards;z-index:-1;opacity:.55;
+}
+@keyframes swash{to{transform:scaleX(1)}}
+.hero__swash{display:block;width:min(560px,80vw);height:26px;margin:.35rem auto 0;color:var(--rose);overflow:visible}
+.hero__swash path{fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-dasharray:620;stroke-dashoffset:620;animation:draw 1.6s .45s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero__sub{
+  margin-top:1.4rem;font-family:var(--font-mono);font-size:clamp(.72rem,1.6vw,.9rem);
+  letter-spacing:.4em;text-transform:uppercase;color:var(--ink-2);
+}
+.hero__desc{max-width:60ch;margin-top:1.7rem;color:var(--ink-2);font-size:clamp(1rem,1.9vw,1.13rem);line-height:1.85}
+.hero__desc b{font-weight:600;color:var(--ink);border-bottom:2px solid rgba(193,150,63,.55)}
+.hero__actions{display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center;margin-top:2.6rem}
+.hero__scroll{
+  position:absolute;left:50%;bottom:2rem;transform:translateX(-50%);z-index:3;
+  display:flex;flex-direction:column;align-items:center;gap:.6rem;
+  font-family:var(--font-mono);font-size:.6rem;letter-spacing:.3em;color:var(--ink-3);
+}
+.hero__scroll i{display:block;width:1px;height:52px;background:linear-gradient(var(--ink-3),transparent);position:relative;overflow:hidden}
+.hero__scroll i::after{content:"";position:absolute;top:-52px;left:0;width:1px;height:52px;background:var(--rose);animation:scrollcue 2.2s ease-in-out infinite}
+@keyframes scrollcue{0%{top:-52px}60%,100%{top:52px}}
+
+.yarn{position:absolute;color:rgba(196,87,79,.42);pointer-events:none;z-index:1}
+.yarn svg{width:100%;height:100%;display:block}
+.yarn--1{width:clamp(110px,13vw,190px);aspect-ratio:1;top:15%;left:6%;animation:float1 13s ease-in-out infinite}
+.yarn--2{width:clamp(78px,9vw,130px);aspect-ratio:1;top:24%;right:8%;color:rgba(127,143,111,.5);animation:float2 16s ease-in-out infinite}
+.yarn--3{width:clamp(58px,7vw,96px);aspect-ratio:1;bottom:16%;left:13%;color:rgba(193,150,63,.5);animation:float2 11s ease-in-out infinite reverse}
+.needle{position:absolute;right:9%;bottom:18%;width:clamp(140px,20vw,300px);color:rgba(33,26,21,.25);z-index:1;animation:float1 15s ease-in-out infinite}
+@keyframes float1{0%,100%{transform:translate3d(0,0,0) rotate(0)}50%{transform:translate3d(0,-26px,0) rotate(7deg)}}
+@keyframes float2{0%,100%{transform:translate3d(0,0,0) rotate(0)}50%{transform:translate3d(-16px,20px,0) rotate(-9deg)}}
+
+.hero__badge{
+  position:absolute;z-index:4;display:flex;align-items:center;gap:.55rem;
+  background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:.5rem .95rem;font-size:.78rem;font-weight:600;
+  box-shadow:0 14px 34px -20px rgba(33,26,21,.6);
+}
+.hero__badge b{font-family:var(--font-mono);letter-spacing:-.02em}
+.hero__badge--1{top:30%;left:clamp(4%,16vw,20%);animation:float2 12s ease-in-out infinite}
+.hero__badge--2{bottom:30%;right:clamp(4%,14vw,18%);animation:float1 14s ease-in-out infinite}
+
+/* ============================================================
+   MARQUEE
+   ============================================================ */
+.marquee{
+  background:var(--ink);color:var(--cream);padding:1.15rem 0;overflow:hidden;
+  border-top:1px solid rgba(255,255,255,.08);position:relative;
+}
+.marquee__track{display:flex;width:max-content;animation:marq 42s linear infinite}
+.marquee:hover .marquee__track{animation-play-state:paused}
+.marquee__group{display:flex;align-items:center;gap:2.6rem;padding-right:2.6rem;flex:none}
+.marquee span{font-family:var(--font-serif);font-size:1.02rem;letter-spacing:-.02em;white-space:nowrap;opacity:.92}
+.marquee i{width:7px;height:7px;border-radius:50%;background:var(--rose);flex:none}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about{background:var(--cream-2);position:relative;overflow:hidden}
+.about__grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2rem,5vw,4.5rem);align-items:start;position:relative;z-index:2}
+.quote{
+  font-family:var(--font-serif);font-size:clamp(1.4rem,3vw,2.15rem);line-height:1.6;
+  letter-spacing:-.04em;position:relative;padding-top:2.4rem;
+}
+.quote::before{
+  content:"“";position:absolute;top:-.35rem;left:-.12em;
+  font-family:var(--font-display);font-size:5.5rem;color:var(--rose);opacity:.35;line-height:1;
+}
+.about__body{margin-top:1.9rem;color:var(--ink-2);font-size:1.03rem;line-height:1.95;max-width:56ch}
+.about__body + .about__body{margin-top:1.1rem}
+.sign{margin-top:2rem;display:flex;align-items:center;gap:.9rem}
+.sign__line{width:56px;height:1.5px;background:var(--ink);opacity:.4}
+.sign span{font-family:var(--font-mono);font-size:.75rem;letter-spacing:.2em;color:var(--ink-3)}
+
+.dual{display:grid;gap:1.1rem;margin-top:2.4rem}
+.dual__card{
+  background:var(--cream);border:1px solid var(--line);border-radius:20px;padding:1.5rem 1.6rem;
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease);position:relative;overflow:hidden;
+}
+.dual__card:hover{transform:translateY(-5px);box-shadow:0 26px 44px -30px rgba(33,26,21,.55)}
+.dual__card h3{font-family:var(--font-serif);font-size:1.22rem;display:flex;align-items:center;gap:.65rem}
+.dual__card h3 svg{width:22px;height:22px;color:var(--rose);flex:none}
+.dual__card p{margin-top:.6rem;font-size:.94rem;color:var(--ink-3);line-height:1.75}
+.dual__card::after{
+  content:"";position:absolute;right:-30px;bottom:-30px;width:96px;height:96px;border-radius:50%;
+  background:radial-gradient(circle,rgba(196,87,79,.14),transparent 68%);
+}
+
+.stats{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;margin-top:3.4rem;
+  position:relative;z-index:2;border-top:1px solid var(--line);padding-top:2.4rem;
+}
+.stat__num{
+  font-family:var(--font-display);font-size:clamp(2rem,4.4vw,3.1rem);font-weight:600;
+  letter-spacing:-.05em;line-height:1;color:var(--ink);
+}
+.stat__num sup{font-size:.4em;vertical-align:super;color:var(--rose);font-weight:700;margin-left:.08em}
+.stat__label{margin-top:.6rem;font-size:.83rem;color:var(--ink-3);letter-spacing:-.01em}
+
+/* channel card */
+.chcard{
+  background:var(--dark);color:var(--cream);border-radius:24px;padding:2rem;
+  position:relative;overflow:hidden;box-shadow:0 40px 60px -44px rgba(33,26,21,.9);
+}
+.chcard .knit{opacity:.09}
+.chcard__top{display:flex;align-items:center;gap:1.05rem;position:relative;z-index:2}
+.avatar{
+  width:66px;height:66px;border-radius:50%;flex:none;display:grid;place-items:center;
+  background:linear-gradient(145deg,var(--rose),#8f3a35);color:#fff;
+  font-family:var(--font-serif);font-size:1.7rem;font-weight:700;
+  box-shadow:0 0 0 3px rgba(250,246,240,.16), 0 0 0 6px rgba(196,87,79,.3);
+}
+.chcard h3{font-family:var(--font-serif);font-size:1.16rem;letter-spacing:-.03em}
+.chcard__handle{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.1em;color:rgba(250,246,240,.5);margin-top:.25rem}
+.chcard__rows{margin-top:1.5rem;display:grid;gap:.1rem;position:relative;z-index:2}
+.chrow{display:flex;justify-content:space-between;gap:1rem;padding:.72rem 0;border-bottom:1px dashed rgba(250,246,240,.16);font-size:.88rem}
+.chrow span:first-child{color:rgba(250,246,240,.6)}
+.chrow span:last-child{font-family:var(--font-mono);letter-spacing:-.01em}
+.chcard__btn{margin-top:1.5rem;width:100%;justify-content:center;position:relative;z-index:2}
+.chcard__note{margin-top:.9rem;font-size:.72rem;color:rgba(250,246,240,.42);text-align:center;position:relative;z-index:2}
+
+/* ============================================================
+   VIDEOS
+   ============================================================ */
+.videos{background:var(--cream);position:relative}
+.feature{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:0;
+  background:#fff;border:1px solid var(--line);border-radius:26px;overflow:hidden;
+  margin-bottom:3rem;box-shadow:0 34px 60px -46px rgba(33,26,21,.7);
+  transition:transform .55s var(--ease),box-shadow .55s var(--ease);
+}
+.feature:hover{transform:translateY(-6px);box-shadow:0 44px 70px -46px rgba(33,26,21,.75)}
+.feature__thumb{position:relative;overflow:hidden;background:var(--cream-3);min-height:260px}
+.feature__thumb img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
+.feature:hover .feature__thumb img{transform:scale(1.06)}
+.feature__body{padding:clamp(1.7rem,3.4vw,2.9rem);display:flex;flex-direction:column;justify-content:center;gap:1rem}
+.tag{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--rose)}
+.tag::before{content:"";width:24px;height:1.5px;background:var(--rose)}
+.feature__body h3{font-family:var(--font-serif);font-size:clamp(1.4rem,2.7vw,2rem);line-height:1.4;letter-spacing:-.04em}
+.feature__body p{color:var(--ink-3);font-size:.95rem;line-height:1.8}
+.feature__meta{display:flex;gap:1.1rem;flex-wrap:wrap;font-family:var(--font-mono);font-size:.76rem;color:var(--ink-3);letter-spacing:.02em}
+.feature__actions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:.4rem}
+
+.playbtn{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:74px;height:74px;border-radius:50%;background:rgba(255,255,255,.92);
+  display:grid;place-items:center;box-shadow:0 16px 40px -14px rgba(0,0,0,.55);
+  transition:transform .5s var(--ease),background .3s;z-index:3;
+}
+.playbtn svg{width:24px;height:24px;color:var(--rose);margin-left:3px}
+.playbtn::after{content:"";position:absolute;inset:-10px;border:1.5px solid rgba(255,255,255,.55);border-radius:50%;animation:ring 2.6s ease-out infinite}
+@keyframes ring{0%{transform:scale(.9);opacity:.9}100%{transform:scale(1.25);opacity:0}}
+.feature:hover .playbtn,.vcard:hover .playbtn{transform:translate(-50%,-50%) scale(1.12);background:#fff}
+
+.tabs{display:flex;gap:.5rem;border-bottom:1px solid var(--line);margin-bottom:2.2rem;flex-wrap:wrap}
+.tab{
+  position:relative;padding:.85rem 1.15rem;font-size:.97rem;font-weight:600;color:var(--ink-3);
+  transition:color .3s;
+}
+.tab::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--rose);transform:scaleX(0);transition:transform .45s var(--ease)}
+.tab:hover{color:var(--ink)}
+.tab.is-active{color:var(--ink)}
+.tab.is-active::after{transform:scaleX(1)}
+.tab__count{font-family:var(--font-mono);font-size:.7rem;color:var(--ink-3);margin-left:.4rem}
+
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,2.4vw,1.9rem)}
+.vcard{display:flex;flex-direction:column;gap:.95rem}
+.vcard__thumb{
+  position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;
+  background:var(--cream-3);box-shadow:0 18px 34px -26px rgba(33,26,21,.8);
+}
+.vcard__thumb img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease),filter .5s}
+.vcard:hover .vcard__thumb img{transform:scale(1.07)}
+.vcard .playbtn{width:56px;height:56px;opacity:0;transform:translate(-50%,-50%) scale(.8)}
+.vcard .playbtn svg{width:18px;height:18px}
+.vcard:hover .playbtn{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.vcard__views{
+  position:absolute;right:.6rem;bottom:.6rem;z-index:3;
+  background:rgba(23,18,15,.82);color:#fff;font-family:var(--font-mono);font-size:.7rem;
+  padding:.25rem .55rem;border-radius:6px;letter-spacing:.02em;backdrop-filter:blur(4px);
+}
+.vcard__shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(23,18,15,.5),transparent 45%);opacity:0;transition:opacity .5s}
+.vcard:hover .vcard__shade{opacity:1}
+.vcard h3{font-size:1.02rem;line-height:1.55;letter-spacing:-.025em;font-weight:600;transition:color .3s}
+.vcard:hover h3{color:var(--rose)}
+.vcard__meta{font-family:var(--font-mono);font-size:.74rem;color:var(--ink-3);margin-top:.5rem;letter-spacing:.02em}
+
+/* ============================================================
+   CATEGORIES
+   ============================================================ */
+.cats{background:var(--cream-2);position:relative;overflow:hidden}
+.cats__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem;position:relative;z-index:2}
+.cat{
+  position:relative;background:var(--cream);border:1px solid var(--line);border-radius:20px;
+  padding:1.8rem 1.5rem 1.6rem;overflow:hidden;display:flex;flex-direction:column;gap:.7rem;min-height:230px;
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .4s;
+}
+.cat:hover{transform:translateY(-7px);box-shadow:0 34px 52px -34px rgba(33,26,21,.6);border-color:transparent}
+.cat__icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:rgba(196,87,79,.1);color:var(--rose);transition:.5s var(--ease)}
+.cat__icon svg{width:23px;height:23px}
+.cat:hover .cat__icon{background:var(--rose);color:#fff;transform:rotate(-8deg)}
+.cat h3{font-family:var(--font-serif);font-size:1.25rem;letter-spacing:-.04em;margin-top:.3rem}
+.cat p{font-size:.9rem;color:var(--ink-3);line-height:1.7}
+.cat__go{margin-top:auto;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.2em;color:var(--ink-2);display:flex;align-items:center;gap:.5rem;transition:gap .4s var(--ease)}
+.cat:hover .cat__go{gap:.95rem;color:var(--rose)}
+.cat__num{position:absolute;right:1.1rem;top:.9rem;font-family:var(--font-display);font-size:2.6rem;color:rgba(33,26,21,.07);font-weight:700}
+
+/* ============================================================
+   PATTERN / SHOP CTA
+   ============================================================ */
+.patterns{background:var(--dark);color:var(--cream);position:relative;overflow:hidden}
+.patterns .sec-head h2{color:var(--cream)}
+.patterns .sec-head h2 em{color:var(--gold)}
+.patterns .sec-head p{color:rgba(250,246,240,.55)}
+.patterns .sec-head__num{color:var(--gold)}
+.patterns__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;position:relative;z-index:2}
+.pcard{
+  background:rgba(250,246,240,.05);border:1px solid rgba(250,246,240,.13);border-radius:20px;
+  padding:1.9rem 1.7rem;display:flex;flex-direction:column;gap:.75rem;
+  transition:transform .5s var(--ease),background .4s,border-color .4s;
+}
+.pcard:hover{transform:translateY(-7px);background:rgba(250,246,240,.09);border-color:rgba(193,150,63,.5)}
+.pcard__k{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+.pcard h3{font-family:var(--font-serif);font-size:1.32rem;letter-spacing:-.04em}
+.pcard p{font-size:.92rem;color:rgba(250,246,240,.6);line-height:1.75}
+.pcard__link{margin-top:.9rem;display:inline-flex;align-items:center;gap:.5rem;font-size:.88rem;font-weight:600;color:var(--cream);border-bottom:1.5px solid var(--gold);padding-bottom:.3rem;align-self:flex-start;transition:gap .4s var(--ease)}
+.pcard__link:hover{gap:.95rem}
+.patterns__banner{
+  margin-top:1.4rem;position:relative;z-index:2;border-radius:20px;overflow:hidden;
+  background:linear-gradient(100deg,rgba(196,87,79,.22),rgba(193,150,63,.16));
+  border:1px solid rgba(250,246,240,.14);
+  padding:1.6rem 1.8rem;display:flex;align-items:center;justify-content:space-between;gap:1.4rem;flex-wrap:wrap;
+}
+.patterns__banner p{font-family:var(--font-serif);font-size:1.08rem;letter-spacing:-.03em}
+.patterns__banner small{display:block;font-family:var(--font-sans);font-size:.83rem;color:rgba(250,246,240,.6);margin-top:.35rem;letter-spacing:0}
+
+/* ============================================================
+   SUBSCRIBE
+   ============================================================ */
+.subs{position:relative;overflow:hidden;text-align:center;background:
+  radial-gradient(55% 60% at 20% 20%,rgba(196,87,79,.2),transparent 70%),
+  radial-gradient(50% 55% at 82% 78%,rgba(193,150,63,.2),transparent 70%),
+  var(--cream);
+}
+.subs__inner{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center}
+.subs h2{font-family:var(--font-serif);font-size:clamp(2.1rem,6vw,4.4rem);letter-spacing:-.05em;line-height:1.2}
+.subs h2 em{font-style:normal;color:var(--rose)}
+.subs p{max-width:52ch;margin-top:1.3rem;color:var(--ink-2);font-size:1.04rem;line-height:1.85}
+.subs__actions{display:flex;gap:.9rem;flex-wrap:wrap;justify-content:center;margin-top:2.3rem}
+.subs__count{margin-top:2rem;display:flex;align-items:center;gap:.7rem;font-family:var(--font-mono);font-size:.8rem;letter-spacing:.16em;color:var(--ink-3)}
+.subs__count b{color:var(--ink);font-size:1.05rem}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{background:var(--dark);color:rgba(250,246,240,.66);padding:4.2rem 0 2.4rem;position:relative;overflow:hidden}
+.footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;position:relative;z-index:2}
+.footer__brand{display:flex;align-items:center;gap:.7rem;color:var(--cream);font-family:var(--font-serif);font-size:1.3rem;font-weight:700}
+.footer__brand svg{width:30px;height:30px;color:var(--rose)}
+.footer__grid p{font-size:.9rem;line-height:1.85;margin-top:1rem;max-width:40ch}
+.footer h4{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem;font-weight:400}
+.footer ul{list-style:none;padding:0;margin:0;display:grid;gap:.7rem;font-size:.92rem}
+.footer ul a{transition:color .3s,padding-left .3s}
+.footer ul a:hover{color:var(--cream);padding-left:.35rem}
+.footer__bottom{
+  margin-top:3rem;padding-top:1.6rem;border-top:1px solid rgba(250,246,240,.12);
+  display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  font-family:var(--font-mono);font-size:.72rem;letter-spacing:.06em;color:rgba(250,246,240,.42);
+  position:relative;z-index:2;
+}
+
+/* ============================================================
+   LIGHTBOX
+   ============================================================ */
+.lb{position:fixed;inset:0;z-index:120;display:grid;place-items:center;padding:1.2rem;opacity:0;pointer-events:none;transition:opacity .35s}
+.lb[hidden]{display:none}
+.lb.is-open{opacity:1;pointer-events:auto}
+.lb__bg{position:absolute;inset:0;background:rgba(15,11,9,.88);backdrop-filter:blur(8px)}
+.lb__panel{position:relative;width:min(1000px,100%);transform:translateY(24px) scale(.98);transition:transform .45s var(--ease)}
+.lb.is-open .lb__panel{transform:none}
+.lb__frame{aspect-ratio:16/9;background:#000;border-radius:16px;overflow:hidden;box-shadow:0 40px 90px -40px rgba(0,0,0,.9)}
+.lb__frame iframe{width:100%;height:100%;border:0;display:block}
+.lb__bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1rem;flex-wrap:wrap}
+.lb__bar .lb__title{flex:1 1 auto;min-width:0}
+.lb__title{color:var(--cream);font-family:var(--font-serif);font-size:1.05rem;letter-spacing:-.03em}
+.lb__hint{font-size:.8rem;color:rgba(250,246,240,.5);width:100%;order:-1;margin-bottom:.6rem}
+.lb__close{
+  position:absolute;top:-3rem;right:0;width:42px;height:42px;border-radius:50%;
+  background:rgba(250,246,240,.14);color:var(--cream);display:grid;place-items:center;font-size:1.4rem;
+  transition:background .3s,transform .3s;
+}
+.lb__close:hover{background:var(--rose);transform:rotate(90deg)}
+
+/* ============================================================
+   REVEAL
+   ============================================================ */
+/* html.anim 이 붙어야만 숨김 처리 — 스크립트가 죽거나 JS가 꺼져 있어도 콘텐츠는 항상 보인다 */
+html.anim .reveal{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0ms)}
+html.anim .reveal.in{opacity:1;transform:none}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1024px){
+  .about__grid{grid-template-columns:1fr}
+  .cats__grid{grid-template-columns:repeat(2,1fr)}
+  .patterns__grid{grid-template-columns:1fr;gap:1rem}
+  .feature{grid-template-columns:1fr}
+  .feature__thumb{min-height:0;aspect-ratio:16/9}
+  .stats{grid-template-columns:repeat(2,1fr);gap:2rem 1.4rem}
+  .footer__grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  :root{--shell:min(1200px, calc(100% - 2.2rem))}
+  body{font-size:16px}
+  .nav__links{
+    position:absolute;left:0;right:0;top:100%;flex-direction:column;align-items:stretch;gap:0;
+    background:rgba(250,246,240,.97);backdrop-filter:blur(18px);border-bottom:1px solid var(--line);
+    padding:.5rem 1.1rem 1.2rem;display:none;
+  }
+  .nav.is-open .nav__links{display:flex}
+  .nav__links a{padding:.95rem .3rem;border-bottom:1px dashed var(--line);font-size:1rem}
+  .nav__links a:last-child{border-bottom:0}
+  .nav__toggle{display:grid}
+  .nav.is-stuck{background:rgba(250,246,240,.94)}
+  .vgrid{grid-template-columns:1fr}
+  .yarn--3,.needle{display:none}
+  .hero__badge{display:none}
+  .lb__close{top:-3.2rem;right:auto;left:0}
+}
+@media (max-width:560px){
+  .cats__grid{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr;gap:1.6rem 1rem}
+  .footer__grid{grid-template-columns:1fr}
+  .hero{padding-top:7rem}
+  .btn{padding:.85rem 1.35rem}
+  .sec-head{margin-bottom:2.2rem}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  html.anim .reveal{opacity:1;transform:none}
+}
+</style>
+<noscript>
+<style>.reveal{opacity:1;transform:none}.vgrid[hidden]{display:grid!important}.tab{pointer-events:none}</style>
+</noscript>
+</head>
+
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+
+<div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="container nav__bar">
+    <a class="brand" href="#top" aria-label="바늘공주 홈">
+      <svg class="brand__mark" viewBox="0 0 120 120" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round">
+          <circle cx="60" cy="60" r="42"/>
+          <ellipse cx="60" cy="60" rx="42" ry="17"/>
+          <ellipse cx="60" cy="60" rx="42" ry="17" transform="rotate(60 60 60)"/>
+          <ellipse cx="60" cy="60" rx="42" ry="17" transform="rotate(120 60 60)"/>
+        </g>
+      </svg>
+      <span>바늘공주<small>BANUL GONGJU</small></span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="주요 메뉴">
+      <a href="#about">소개</a>
+      <a href="#videos">영상</a>
+      <a href="#cats">카테고리</a>
+      <a href="#patterns">도안·패키지</a>
+      <a href="#subscribe">구독</a>
+    </nav>
+
+    <div class="nav__cta">
+      <a class="btn btn--yt btn--sm" href="https://www.youtube.com/@forestkim3588?sub_confirmation=1" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg>
+        구독
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navLinks"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="knit" aria-hidden="true"></div>
+
+  <div class="yarn yarn--1" aria-hidden="true">
+    <svg viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+      <circle cx="60" cy="60" r="42"/><ellipse cx="60" cy="60" rx="42" ry="17"/>
+      <ellipse cx="60" cy="60" rx="42" ry="17" transform="rotate(60 60 60)"/>
+      <ellipse cx="60" cy="60" rx="42" ry="17" transform="rotate(120 60 60)"/>
+      <path d="M95 80c16 12 8 30-9 34"/>
+    </g></svg>
+  </div>
+  <div class="yarn yarn--2" aria-hidden="true">
+    <svg viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round">
+      <circle cx="60" cy="60" r="42"/><ellipse cx="60" cy="60" rx="42" ry="17"/>
+      <ellipse cx="60" cy="60" rx="42" ry="17" transform="rotate(60 60 60)"/>
+      <ellipse cx="60" cy="60" rx="42" ry="17" transform="rotate(120 60 60)"/>
+    </g></svg>
+  </div>
+  <div class="yarn yarn--3" aria-hidden="true">
+    <svg viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+      <circle cx="60" cy="60" r="42"/><ellipse cx="60" cy="60" rx="42" ry="17"/>
+      <ellipse cx="60" cy="60" rx="42" ry="17" transform="rotate(60 60 60)"/>
+      <ellipse cx="60" cy="60" rx="42" ry="17" transform="rotate(120 60 60)"/>
+    </g></svg>
+  </div>
+
+  <svg class="needle" viewBox="0 0 300 40" aria-hidden="true">
+    <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+      <path d="M14 20h264"/><path d="M278 20c8 0 14 0 14 0" /><path d="M8 20c-4-4-4-8 0-8s6 4 6 8-2 8-6 8"/>
+      <path d="M60 20c14 14 30 14 44 0s30-14 44 0 30 14 44 0"/>
+    </g>
+  </svg>
+
+  <div class="hero__badge hero__badge--1" aria-hidden="true">🧶 코바늘 &amp; 대바늘</div>
+  <div class="hero__badge hero__badge--2" aria-hidden="true">🌿 수초가꾸기 · 미니수조</div>
+
+  <div class="container hero__inner">
+    <p class="hero__eyebrow"><span class="dot"></span>YouTube Channel · Since 2019</p>
+
+    <h1 class="hero__title">바늘<span class="accent">공주</span></h1>
+
+    <svg class="hero__swash" viewBox="0 0 560 26" aria-hidden="true">
+      <path d="M6 18C70 4 118 4 176 16s108 12 168 0 116-14 210-2"/>
+    </svg>
+
+    <p class="hero__sub">Forest Kim · 포레스트 김</p>
+
+    <p class="hero__desc">
+      실 한 타래와 바늘 한 쌍으로 완성하는 옷, 가방, 그리고 물속 정원.
+      <b>코바늘·대바늘 손뜨개</b>부터 <b>수초가꾸기</b>까지 —
+      손으로 만드는 것을 사랑하는 사람이 천천히, 한 코씩 전하는 채널입니다.
+    </p>
+
+    <div class="hero__actions">
+      <a class="btn btn--yt" href="https://www.youtube.com/@forestkim3588?sub_confirmation=1" target="_blank" rel="noopener">
+        채널 구독하기
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="#videos">
+        최신 영상 보기
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">SCROLL<i></i></div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <div class="marquee__group">
+      <span>코바늘</span><i></i><span>대바늘</span><i></i><span>탑다운 가디건</span><i></i>
+      <span>케이블</span><i></i><span>레이스</span><i></i><span>도안 · 패키지</span><i></i>
+      <span>가방뜨기</span><i></i><span>수초가꾸기</span><i></i><span>미니수조</span><i></i>
+      <span>Handmade with love</span><i></i>
+    </div>
+    <div class="marquee__group">
+      <span>코바늘</span><i></i><span>대바늘</span><i></i><span>탑다운 가디건</span><i></i>
+      <span>케이블</span><i></i><span>레이스</span><i></i><span>도안 · 패키지</span><i></i>
+      <span>가방뜨기</span><i></i><span>수초가꾸기</span><i></i><span>미니수조</span><i></i>
+      <span>Handmade with love</span><i></i>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section class="sec about" id="about">
+  <div class="knit" aria-hidden="true"></div>
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <span class="sec-head__num">01 — ABOUT</span>
+        <h2>손으로 만드는 모든 것을<br><em>사랑하는 사람</em></h2>
+      </div>
+      <a class="link-more" href="https://www.youtube.com/@forestkim3588/about" target="_blank" rel="noopener">
+        채널 소개 더보기
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+
+    <div class="about__grid">
+      <div>
+        <p class="quote reveal">알 럽 핸드메이드~♡<br>손으로 만드는 것을 넘나 사랑하는<br>바늘공주의 포레스트 김입니다.</p>
+
+        <p class="about__body reveal" style="--d:100ms">
+          2019년 10월, 첫 영상을 올린 이후 지금까지 <b>198편</b>의 영상이 쌓였습니다.
+          탑다운 가디건과 베스트, 클러치백까지 — 코바늘과 대바늘로 옷을 짓고 가방을 뜹니다.
+          완성까지 가는 길이 멀 때도 있지만, 구간별 <b>참고 영상과 타임스탬프</b>를 함께
+          알려드려 처음 뜨는 분도 끝까지 따라올 수 있습니다.
+        </p>
+        <p class="about__body reveal" style="--d:180ms">
+          또 하나의 세계는 <b>물생활</b>. 수초가꾸기와 미니 수조 꾸미기로 싱그러운 초록빛
+          물속 정원을 가꿉니다. 두 취미의 공통점은 단 하나, 손끝에서 천천히 완성되는 즐거움입니다.
+        </p>
+
+        <div class="sign reveal" style="--d:240ms">
+          <span class="sign__line"></span>
+          <span>바늘공주 FOREST KIM · SEOUL, KOREA</span>
+        </div>
+
+        <div class="dual">
+          <div class="dual__card reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 20 20 4M7 4l3 3M13 16l3 3M4 14l6 6M14 4l6 6"/></svg>
+              손뜨개 · 코바늘 &amp; 대바늘
+            </h3>
+            <p>가디건 · 베스트 · 가방까지. 도안 구매 링크와 패키지 안내, 그리고 구간별 참고 영상까지 한 영상에 모두 담았습니다.</p>
+          </div>
+          <div class="dual__card reveal" style="--d:100ms">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c0-6 3-10 8-12-1 7-4 10-8 12Z"/><path d="M12 21c0-5-2.5-8.5-7-10 .8 6 3.3 8.7 7 10Z"/><path d="M12 21v-4"/></svg>
+              물생활 · 수초가꾸기
+            </h3>
+            <p>미니 수조 꾸미기와 수초 가꾸기. 작은 유리병 안에서 시작하는 초록빛 정원 이야기를 만나보세요.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="chcard reveal" style="--d:140ms">
+        <div class="knit knit--dark" aria-hidden="true"></div>
+        <div class="chcard__top">
+          <div class="avatar" aria-hidden="true">公</div>
+          <div>
+            <h3>바늘공주Forest Kim</h3>
+            <div class="chcard__handle">@forestkim3588</div>
+          </div>
+        </div>
+        <div class="chcard__rows">
+          <div class="chrow"><span>구독자</span><span>77,100+</span></div>
+          <div class="chrow"><span>누적 영상</span><span>198편</span></div>
+          <div class="chrow"><span>채널 시작</span><span>2019. 10. 27</span></div>
+          <div class="chrow"><span>최근 1년 업로드</span><span>10편</span></div>
+          <div class="chrow"><span>언어</span><span>KR / EN 자막</span></div>
+        </div>
+        <a class="btn btn--light chcard__btn" href="https://www.youtube.com/@forestkim3588" target="_blank" rel="noopener">
+          유튜브에서 채널 방문
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+        <p class="chcard__note">구독자 · 영상 수는 유튜브 기준이며 변동될 수 있습니다.</p>
+      </aside>
+    </div>
+
+    <div class="stats">
+      <div class="stat reveal">
+        <div class="stat__num" data-count="77100" data-format="comma">0<sup>+</sup></div>
+        <div class="stat__label">구독자</div>
+      </div>
+      <div class="stat reveal" style="--d:90ms">
+        <div class="stat__num" data-count="198" data-format="comma">0</div>
+        <div class="stat__label">누적 업로드 영상</div>
+      </div>
+      <div class="stat reveal" style="--d:180ms">
+        <div class="stat__num" data-count="10">0</div>
+        <div class="stat__label">최근 1년 신작</div>
+      </div>
+      <div class="stat reveal" style="--d:270ms">
+        <div class="stat__num">2019</div>
+        <div class="stat__label">채널 시작</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIDEOS ================= -->
+<section class="sec videos" id="videos">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <span class="sec-head__num">02 — VIDEOS</span>
+        <h2>지금 뜨고 있는 것,<br><em>가장 많이 사랑받은 것</em></h2>
+        <p>영상 속 타임스탬프와 도안 링크가 설명란에 함께 있어요. 재생 버튼을 누르면 바로 확인할 수 있습니다.</p>
+      </div>
+      <a class="link-more" href="https://www.youtube.com/@forestkim3588/videos" target="_blank" rel="noopener">
+        전체 영상 보기
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+
+    <!-- featured newest -->
+    <a class="feature reveal" href="https://www.youtube.com/watch?v=6r8SecdkuEA" target="_blank" rel="noopener" data-video="6r8SecdkuEA" data-title="브리즈 케이블 볼레로 ㅣ클래식 케이블 볼레로">
+      <div class="feature__thumb">
+        <img src="https://i.ytimg.com/vi/6r8SecdkuEA/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/6r8SecdkuEA/hqdefault.jpg" alt="브리즈 케이블 볼레로 영상 썸네일" loading="lazy" decoding="async">
+        <span class="playbtn" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </span>
+      </div>
+      <div class="feature__body">
+        <span class="tag">Latest · 2026.09.15 공개</span>
+        <h3>브리즈 케이블 볼레로<br>ㅣ 클래식 케이블 볼레로</h3>
+        <p>요크 늘림부터 앞섶밴드, 리본끈과 단추홀까지. 케이블과 오픈워크가 어우러진 볼레로를 끝까지 함께 뜨는 영상입니다.</p>
+        <div class="feature__meta">
+          <span>▶ 27,728회</span><span>♥ 460</span><span>CROCHET TUTORIAL</span>
+        </div>
+        <div class="feature__actions">
+          <span class="btn btn--primary btn--sm">영상 재생하기
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+          <span class="btn btn--ghost btn--sm">도안 보러가기
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </span>
+        </div>
+      </div>
+    </a>
+
+    <div class="tabs" role="tablist" aria-label="영상 정렬">
+      <button class="tab is-active" role="tab" id="tab-latest" aria-selected="true" aria-controls="panel-latest" data-tab="latest">최신 영상<span class="tab__count">6</span></button>
+      <button class="tab" role="tab" id="tab-popular" aria-selected="false" aria-controls="panel-popular" data-tab="popular" tabindex="-1">인기 영상<span class="tab__count">6</span></button>
+    </div>
+
+    <!-- LATEST -->
+    <div class="vgrid" id="panel-latest" role="tabpanel" aria-labelledby="tab-latest" data-panel="latest">
+      <a class="vcard reveal" href="https://www.youtube.com/watch?v=A8Efh4ZbfYc" target="_blank" rel="noopener" data-video="A8Efh4ZbfYc" data-title="사선밴드 메쉬 풀오버 ㅣ 시원한 여름 니트 뜨기">
+        <div class="vcard__thumb">
+          <img src="https://i.ytimg.com/vi/A8Efh4ZbfYc/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/A8Efh4ZbfYc/hqdefault.jpg" alt="사선밴드 메쉬 풀오버 썸네일" loading="lazy" decoding="async">
+          <span class="vcard__shade"></span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">1.7만회</span>
+        </div>
+        <div><h3>사선밴드 메쉬 풀오버 ㅣ 시원한 여름 니트 뜨기</h3><p class="vcard__meta">2026.08.01 · 한 영상 끝까지</p></div>
+      </a>
+
+      <a class="vcard reveal" style="--d:80ms" href="https://www.youtube.com/watch?v=qFXcmE8gWMk" target="_blank" rel="noopener" data-video="qFXcmE8gWMk" data-title="포켓 메쉬 베스트 ㅣ 가볍고 시원한 여름 코바늘 베스트">
+        <div class="vcard__thumb">
+          <img src="https://i.ytimg.com/vi/qFXcmE8gWMk/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/qFXcmE8gWMk/hqdefault.jpg" alt="포켓 메쉬 베스트 썸네일" loading="lazy" decoding="async">
+          <span class="vcard__shade"></span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">2.6만회</span>
+        </div>
+        <div><h3>포켓 메쉬 베스트 ㅣ 가볍고 시원한 여름 코바늘 베스트</h3><p class="vcard__meta">2026.07.03 · EN 패턴 있음</p></div>
+      </a>
+
+      <a class="vcard reveal" style="--d:160ms" href="https://www.youtube.com/watch?v=cW0whUuOan4" target="_blank" rel="noopener" data-video="cW0whUuOan4" data-title="레이스웨이브 가디건 뜨기 ㅣ 탑다운 여름 레이스 가디건">
+        <div class="vcard__thumb">
+          <img src="https://i.ytimg.com/vi/cW0whUuOan4/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/cW0whUuOan4/hqdefault.jpg" alt="레이스웨이브 가디건 썸네일" loading="lazy" decoding="async">
+          <span class="vcard__shade"></span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">3.8만회</span>
+        </div>
+        <div><h3>레이스웨이브 가디건 뜨기 ㅣ 탑다운 여름 레이스 가디건</h3><p class="vcard__meta">2026.06.05 · Ravelry EN</p></div>
+      </a>
+
+      <a class="vcard reveal" href="https://www.youtube.com/watch?v=4bxKbm1vpdc" target="_blank" rel="noopener" data-video="4bxKbm1vpdc" data-title="코지버블베스트 ㅣ 겨울 & 여름 버전">
+        <div class="vcard__thumb">
+          <img src="https://i.ytimg.com/vi/4bxKbm1vpdc/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/4bxKbm1vpdc/hqdefault.jpg" alt="코지버블베스트 썸네일" loading="lazy" decoding="async">
+          <span class="vcard__shade"></span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">1.8만회</span>
+        </div>
+        <div><h3>코지버블베스트 ㅣ 겨울 &amp; 여름 버전</h3><p class="vcard__meta">2026.03.20 · 두 계절 버전</p></div>
+      </a>
+
+      <a class="vcard reveal" style="--d:80ms" href="https://www.youtube.com/watch?v=26Bffdq_SL8" target="_blank" rel="noopener" data-video="26Bffdq_SL8" data-title="아란숄카라가디건 뜨기 ㅣ 바늘공주">
+        <div class="vcard__thumb">
+          <img src="https://i.ytimg.com/vi/26Bffdq_SL8/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/26Bffdq_SL8/hqdefault.jpg" alt="아란 숄카라 가디건 썸네일" loading="lazy" decoding="async">
+          <span class="vcard__shade"></span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">4.4만회</span>
+        </div>
+        <div><h3>아란숄카라가디건 뜨기 ㅣ 바늘공주</h3><p class="vcard__meta">2026.02.24 · 참고영상 13개</p></div>
+      </a>
+
+      <a class="vcard reveal" style="--d:160ms" href="https://www.youtube.com/watch?v=AXiRNuUl1s4" target="_blank" rel="noopener" data-video="AXiRNuUl1s4" data-title="쉽게 뜨는 폴라베스트 ㅣ 옆트임 (오픈형) 베스트">
+        <div class="vcard__thumb">
+          <img src="https://i.ytimg.com/vi/AXiRNuUl1s4/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/AXiRNuUl1s4/hqdefault.jpg" alt="폴라베스트 썸네일" loading="lazy" decoding="async">
+          <span class="vcard__shade"></span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">3.5만회</span>
+        </div>
+        <div><h3>쉽게 뜨는 폴라베스트 ㅣ 옆트임 (오픈형) 베스트</h3><p class="vcard__meta">2026.01.13 · 초보 추천</p></div>
+      </a>
+    </div>
+
+    <!-- POPULAR -->
+    <div class="vgrid" id="panel-popular" role="tabpanel" aria-labelledby="tab-popular" data-panel="popular" hidden>
+      <a class="vcard" href="https://www.youtube.com/watch?v=3q8XxZ14pkg" target="_blank" rel="noopener" data-video="3q8XxZ14pkg" data-title="꽃패턴 플레어 베스트 ㅣ 샤랄라 베스트 떠보세요">
+        <div class="vcard__thumb">
+          <img src="https://i.ytimg.com/vi/3q8XxZ14pkg/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/3q8XxZ14pkg/hqdefault.jpg" alt="꽃패턴 플레어 베스트 썸네일" loading="lazy" decoding="async">
+          <span class="vcard__shade"></span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">8.5만회</span>
+        </div>
+        <div><h3>꽃패턴 플레어 베스트 ㅣ 샤랄라 베스트 떠보세요</h3><p class="vcard__meta">2025.02.14 · ♥ 1,370</p></div>
+      </a>
+
+      <a class="vcard" href="https://www.youtube.com/watch?v=ue3vxM0GGJs" target="_blank" rel="noopener" data-video="ue3vxM0GGJs" data-title="[ENG] 케이프 st 자켓뜨기 ㅣ 탑다운 자켓">
+        <div class="vcard__thumb">
+          <img src="https://i.ytimg.com/vi/ue3vxM0GGJs/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/ue3vxM0GGJs/hqdefault.jpg" alt="케이프 스타일 자켓 썸네일" loading="lazy" decoding="async">
+          <span class="vcard__shade"></span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">7.7만회</span>
+        </div>
+        <div><h3>[ENG] 케이프 st 자켓뜨기 ㅣ 탑다운 자켓</h3><p class="vcard__meta">2025.12.11 · ♥ 1,428</p></div>
+      </a>
+
+      <a class="vcard" href="https://www.youtube.com/watch?v=26Bffdq_SL8" target="_blank" rel="noopener" data-video="26Bffdq_SL8" data-title="아란숄카라가디건 뜨기 ㅣ 바늘공주">
+        <div class="vcard__thumb">
+          <img src="https://i.ytimg.com/vi/26Bffdq_SL8/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/26Bffdq_SL8/hqdefault.jpg" alt="아란 숄카라 가디건 썸네일" loading="lazy" decoding="async">
+          <span class="vcard__shade"></span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">4.4만회</span>
+        </div>
+        <div><h3>아란숄카라가디건 뜨기 ㅣ 바늘공주</h3><p class="vcard__meta">2026.02.24 · ♥ 849</p></div>
+      </a>
+
+      <a class="vcard" href="https://www.youtube.com/watch?v=LRhWvWvy1CM" target="_blank" rel="noopener" data-video="LRhWvWvy1CM" data-title="크로쉐 가디건 뜨기 ㅣ 무봉제 가디건">
+        <div class="vcard__thumb">
+          <img src="https://i.ytimg.com/vi/LRhWvWvy1CM/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/LRhWvWvy1CM/hqdefault.jpg" alt="크로쉐 무봉제 가디건 썸네일" loading="lazy" decoding="async">
+          <span class="vcard__shade"></span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">4.2만회</span>
+        </div>
+        <div><h3>크로쉐 가디건 뜨기 ㅣ 무봉제 가디건</h3><p class="vcard__meta">2025.10.30 · ♥ 785</p></div>
+      </a>
+
+      <a class="vcard" href="https://www.youtube.com/watch?v=8dqJ24yEo5I" target="_blank" rel="noopener" data-video="8dqJ24yEo5I" data-title="뒤트임 뷔스티에 ㅣ 초보뜨개 ㅣ 옷만들기">
+        <div class="vcard__thumb">
+          <img src="https://i.ytimg.com/vi/8dqJ24yEo5I/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/8dqJ24yEo5I/hqdefault.jpg" alt="뒤트임 뷔스티에 썸네일" loading="lazy" decoding="async">
+          <span class="vcard__shade"></span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">3.7만회</span>
+        </div>
+        <div><h3>🧶 뒤트임 뷔스티에 ㅣ 초보뜨개 ㅣ 옷만들기</h3><p class="vcard__meta">2025.10.01 · ♥ 560</p></div>
+      </a>
+
+      <a class="vcard" href="https://www.youtube.com/watch?v=we836WAen00" target="_blank" rel="noopener" data-video="we836WAen00" data-title="노밴드 라인자켓 뜨기 ㅣ 아웃포켓뜨기">
+        <div class="vcard__thumb">
+          <img src="https://i.ytimg.com/vi/we836WAen00/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/we836WAen00/hqdefault.jpg" alt="노밴드 라인자켓 썸네일" loading="lazy" decoding="async">
+          <span class="vcard__shade"></span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">3.0만회</span>
+        </div>
+        <div><h3>노밴드 라인자켓 뜨기 ㅣ 아웃포켓뜨기</h3><p class="vcard__meta">2024.12.27 · ♥ 563</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CATEGORIES ================= -->
+<section class="sec cats" id="cats">
+  <div class="knit" aria-hidden="true"></div>
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <span class="sec-head__num">03 — PLAYLISTS</span>
+        <h2>네 개의 <em>서랍</em>에서<br>마음에 드는 걸 꺼내보세요</h2>
+      </div>
+      <a class="link-more" href="https://www.youtube.com/@forestkim3588/playlists" target="_blank" rel="noopener">
+        전체 재생목록
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+
+    <div class="cats__grid">
+      <a class="cat reveal" href="https://www.youtube.com/@forestkim3588/playlists" target="_blank" rel="noopener">
+        <span class="cat__num">01</span>
+        <span class="cat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4M7 4l3 3M13 16l3 3M4 14l6 6M14 4l6 6"/></svg></span>
+        <h3>손뜨개</h3>
+        <p>코바늘과 대바늘로 뜨는 옷과 소품. 초보도 끝까지 따라올 수 있도록 구간 안내를 함께 담았습니다.</p>
+        <span class="cat__go">WATCH <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+
+      <a class="cat reveal" style="--d:90ms" href="https://www.youtube.com/@forestkim3588/playlists" target="_blank" rel="noopener">
+        <span class="cat__num">02</span>
+        <span class="cat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3 5 5 3 12l4 1v8h10v-8l4-1-2-7-4-2"/><path d="M9 3a3 3 0 0 0 6 0"/></svg></span>
+        <h3>겨울가디건</h3>
+        <p>도톰한 계절을 위한 가디건 컬렉션. 아란 · 케이블 · 숄카라까지 100편 넘는 목록이 모여 있습니다.</p>
+        <span class="cat__go">WATCH <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+
+      <a class="cat reveal" style="--d:180ms" href="https://www.youtube.com/@forestkim3588/playlists" target="_blank" rel="noopener">
+        <span class="cat__num">03</span>
+        <span class="cat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16l-1.4 12.1a2 2 0 0 1-2 1.9H7.4a2 2 0 0 1-2-1.9L4 8Z"/><path d="M8.5 8V6a3.5 3.5 0 0 1 7 0v2"/></svg></span>
+        <h3>가방뜨기</h3>
+        <p>클러치백부터 볼드백까지. 명품 스타일 가방까지 도전해 보는 가방 전용 모음입니다.</p>
+        <span class="cat__go">WATCH <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+
+      <a class="cat reveal" style="--d:270ms" href="https://www.youtube.com/@forestkim3588/playlists" target="_blank" rel="noopener">
+        <span class="cat__num">04</span>
+        <span class="cat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20c0-6 3-10 8-12-1 7-4 10-8 12Z"/><path d="M12 20c0-5-2.5-8.5-7-10 .8 6 3.3 8.7 7 10Z"/><path d="M4 20h16"/></svg></span>
+        <h3>물생활</h3>
+        <p>수초가꾸기와 미니 수조 꾸미기. 작은 유리병 안에서 시작하는 초록빛 물속 정원 이야기.</p>
+        <span class="cat__go">WATCH <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PATTERN / PACKAGE ================= -->
+<section class="sec patterns" id="patterns">
+  <div class="knit knit--dark" aria-hidden="true"></div>
+  <div class="container">
+    <div class="sec-head reveal">
+      <div>
+        <span class="sec-head__num">04 — PATTERN &amp; KIT</span>
+        <h2>영상대로 <em>떠보고 싶다면</em></h2>
+        <p>모든 영상 설명란에 도안 구매 링크와 패키지 주문 안내, 영어 도안 링크가 함께 있습니다.</p>
+      </div>
+    </div>
+
+    <div class="patterns__grid">
+      <div class="pcard reveal">
+        <span class="pcard__k">Pattern</span>
+        <h3>뜨개 도안</h3>
+        <p>최신작 「브리즈 케이블 볼레로」를 포함한 모든 도안을 네이버에서 만나보세요. 도안에는 분량별 난이도와 소요 실량이 정리되어 있습니다.</p>
+        <a class="pcard__link" href="https://naver.me/FfsylHdT" target="_blank" rel="noopener">최신 도안 보기
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+
+      <div class="pcard reveal" style="--d:100ms">
+        <span class="pcard__k">Kit</span>
+        <h3>뜨개 패키지</h3>
+        <p>실과 바늘, 부자재를 한 번에. 도안에 딱 맞는 색상 조합으로 준비된 패키지를 주문할 수 있습니다.</p>
+        <a class="pcard__link" href="https://naver.me/x6JvBuG0" target="_blank" rel="noopener">패키지 주문 안내
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+
+      <div class="pcard reveal" style="--d:200ms">
+        <span class="pcard__k">Community</span>
+        <h3>바늘공주 밴드</h3>
+        <p>‘바늘공주 [뜨개도안과 방법공유]’ 밴드에서 패키지 구매 정보와 작품 사진, 질문과 답변을 이어갑니다.</p>
+        <a class="pcard__link" href="https://band.us/n/a1af81v2AbheQ" target="_blank" rel="noopener">밴드 가입하기
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="patterns__banner reveal">
+      <div>
+        <p>해외에서 뜨고 싶다면? 영어 도안(Ravelry)도 준비되어 있습니다.</p>
+        <small>Lace Wave Cardigan · Pocket Mesh Vest · Cozy Bubble Cable Vest 외 다수</small>
+      </div>
+      <a class="btn btn--outline-light btn--sm" href="https://ravel.me/pocket-mesh-vest" target="_blank" rel="noopener">
+        Ravelry에서 보기
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SUBSCRIBE ================= -->
+<section class="sec subs" id="subscribe">
+  <div class="knit" aria-hidden="true"></div>
+  <div class="container subs__inner">
+    <span class="chip reveal"><span class="dot"></span>SUBSCRIBE · 구독</span>
+    <h2 class="reveal" style="--d:80ms">실 한 타래를<br><em>이어가 주세요</em></h2>
+    <p class="reveal" style="--d:160ms">
+      새 영상이 올라올 때 가장 먼저 보고, 도안과 패키지 소식도 놓치지 마세요.
+      77,100명이 이미 바늘공주의 손끝을 함께 지켜보고 있습니다.
+    </p>
+    <div class="subs__actions reveal" style="--d:240ms">
+      <a class="btn btn--yt" href="https://www.youtube.com/@forestkim3588?sub_confirmation=1" target="_blank" rel="noopener">
+        유튜브에서 구독하기
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4L15.8 12l-6.2 3.6z"/></svg>
+      </a>
+      <a class="btn btn--ghost" href="https://band.us/n/a1af81v2AbheQ" target="_blank" rel="noopener">
+        밴드에서 함께하기
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+    <div class="subs__count reveal" style="--d:320ms">youtube.com/@forestkim3588 <b>· 77.1K subscribers</b></div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="knit knit--dark" aria-hidden="true"></div>
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">
+          <svg viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round">
+            <circle cx="60" cy="60" r="42"/><ellipse cx="60" cy="60" rx="42" ry="17"/>
+            <ellipse cx="60" cy="60" rx="42" ry="17" transform="rotate(60 60 60)"/>
+            <ellipse cx="60" cy="60" rx="42" ry="17" transform="rotate(120 60 60)"/>
+          </g></svg>
+          바늘공주Forest Kim
+        </div>
+        <p>
+          알 럽 핸드메이드~♡ 손으로 만드는 것을 넘나 사랑하는 바늘공주의 포레스트 김입니다.
+          손뜨개와 물생활, 두 개의 카테고리로 매주 새로운 영상을 전합니다.
+        </p>
+      </div>
+
+      <div>
+        <h4>Channel</h4>
+        <ul>
+          <li><a href="https://www.youtube.com/@forestkim3588" target="_blank" rel="noopener">유튜브 채널</a></li>
+          <li><a href="https://www.youtube.com/@forestkim3588/videos" target="_blank" rel="noopener">전체 영상</a></li>
+          <li><a href="https://www.youtube.com/@forestkim3588/playlists" target="_blank" rel="noopener">재생목록</a></li>
+          <li><a href="https://www.youtube.com/@forestkim3588/about" target="_blank" rel="noopener">채널 소개</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Pattern &amp; Kit</h4>
+        <ul>
+          <li><a href="https://naver.me/FfsylHdT" target="_blank" rel="noopener">최신작 도안</a></li>
+          <li><a href="https://naver.me/x6JvBuG0" target="_blank" rel="noopener">패키지 주문</a></li>
+          <li><a href="https://band.us/n/a1af81v2AbheQ" target="_blank" rel="noopener">바늘공주 밴드</a></li>
+          <li><a href="https://ravel.me/pocket-mesh-vest" target="_blank" rel="noopener">영어 도안 (Ravelry)</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© 2026 바늘공주Forest Kim · FAN-MADE INTRO PAGE</span>
+      <span>DATA · YOUTUBE OFFICIAL FEED (2026.09 기준)</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="영상 재생" hidden>
+  <div class="lb__bg" data-close></div>
+  <div class="lb__panel">
+    <button class="lb__close" data-close aria-label="닫기">×</button>
+    <div class="lb__frame"><iframe id="lbFrame" title="유튜브 영상" src="about:blank" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+    <div class="lb__bar">
+      <span class="lb__hint">영상이 안 보이거나 차단되어 있으면 오른쪽의 “유튜브에서 열기” 버튼으로 재생해 주세요.</span>
+      <span class="lb__title" id="lbTitle"></span>
+      <a class="btn btn--outline-light btn--sm" id="lbOpen" href="#" target="_blank" rel="noopener">유튜브에서 열기
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var doc = document;
+
+  /* ========== 공용 유틸 ========== */
+  function qs(sel, root){ return (root || doc).querySelector(sel); }
+  function qsa(sel, root){ return Array.prototype.slice.call((root || doc).querySelectorAll(sel)); }
+
+  // 구형 브라우저에서도 동작하는 Element.closest 대체
+  function closest(node, sel){
+    var el = node;
+    while(el && el.nodeType === 1){
+      if(el.matches){ if(el.matches(sel)) return el; }
+      else if(el.msMatchesSelector){ if(el.msMatchesSelector(sel)) return el; }
+      el = el.parentNode;
+    }
+    return null;
+  }
+
+  // 한 기능이 예외를 던져도 다른 기능이 죽지 않도록 격리 실행
+  function guard(label, fn){
+    try{ fn(); }
+    catch(err){ if(window.console && console.warn) console.warn('[바늘공주] ' + label + ' 실패:', err); }
+  }
+
+  var reduced = false;
+  try{ reduced = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); }
+  catch(e){ reduced = false; }
+
+  /* ============================================================
+     1. 영상 팝업 — 가장 먼저, 가장 안전하게 바인딩
+     ============================================================ */
+  guard('영상 팝업', function(){
+    var lb = qs('#lightbox');
+    var frame = qs('#lbFrame');
+    var lbTitle = qs('#lbTitle');
+    var lbOpen = qs('#lbOpen');
+    var closeBtn = lb ? qs('.lb__close', lb) : null;
+    var lastFocus = null;
+
+    if(!lb || !frame) return;
+
+    function openVideo(id, title){
+      if(!id) return;
+      lastFocus = doc.activeElement;
+
+      lb.hidden = false;
+      void lb.offsetWidth;                       // reflow 강제 → 등장 transition 보장
+      lb.classList.add('is-open');
+
+      frame.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0';
+      if(lbTitle) lbTitle.textContent = title || '';
+      if(lbOpen) lbOpen.href = 'https://www.youtube.com/watch?v=' + encodeURIComponent(id);
+
+      doc.body.style.overflow = 'hidden';
+      try{ if(closeBtn) closeBtn.focus(); }catch(e){}
+    }
+
+    function closeVideo(){
+      lb.classList.remove('is-open');
+      doc.body.style.overflow = '';
+      setTimeout(function(){
+        lb.hidden = true;
+        try{ frame.src = 'about:blank'; }catch(e){}
+      }, 320);
+      if(lastFocus && lastFocus.focus){ try{ lastFocus.focus(); }catch(e){} }
+    }
+
+    function handle(e){
+      if(!e || e.defaultPrevented) return;        // 같은 클릭이 두 번 처리되는 것 방지
+
+      var card = closest(e.target, '[data-video]');
+      if(card){
+        e.preventDefault();
+        openVideo(card.getAttribute('data-video'), card.getAttribute('data-title'));
+        return;
+      }
+      if(closest(e.target, '[data-close]')) closeVideo();
+    }
+
+    // 위임(문서) + 개별 바인딩 이중 안전장치
+    doc.addEventListener('click', handle, false);
+    qsa('[data-video]').forEach(function(el){ el.addEventListener('click', handle, false); });
+
+    doc.addEventListener('keydown', function(e){
+      if(!lb.hidden && (e.key === 'Escape' || e.keyCode === 27)) closeVideo();
+    });
+  });
+
+  /* ============================================================
+     2. 썸네일 폴백 (maxres → hqdefault)
+     ============================================================ */
+  guard('썸네일 폴백', function(){
+    qsa('img[data-fallback]').forEach(function(img){
+      img.addEventListener('error', function handler(){
+        img.removeEventListener('error', handler);
+        img.src = img.getAttribute('data-fallback');
+      });
+    });
+  });
+
+  /* ============================================================
+     3. 상단 바 (고정/블러 + 모바일 메뉴)
+     ============================================================ */
+  guard('상단 바', function(){
+    var nav = qs('#nav');
+    var toggle = qs('#navToggle');
+    var links = qs('#navLinks');
+    if(!nav) return;
+
+    if(toggle){
+      toggle.addEventListener('click', function(){
+        var open = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+      });
+    }
+    if(links){
+      links.addEventListener('click', function(e){
+        if(e.target && e.target.tagName === 'A'){
+          nav.classList.remove('is-open');
+          if(toggle) toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  });
+
+  /* ============================================================
+     4. 스크롤 진행바
+     ============================================================ */
+  guard('스크롤 진행바', function(){
+    var nav = qs('#nav');
+    var bar = qs('#progressBar');
+    var ticking = false;
+
+    function paint(){
+      var y = window.pageYOffset || doc.documentElement.scrollTop || 0;
+      var h = doc.documentElement.scrollHeight - window.innerHeight;
+      if(bar) bar.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+      if(nav) nav.classList.toggle('is-stuck', y > 24);
+      ticking = false;
+    }
+    function onScroll(){
+      if(ticking) return;
+      ticking = true;
+      if(window.requestAnimationFrame) requestAnimationFrame(paint);
+      else paint();
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  });
+
+  /* ============================================================
+     5. 스크롤 등장 & 숫자 카운트업
+        - IntersectionObserver 미지원/모션저감 → 애니메이션 없이 전부 표시
+        - 관찰자를 다 만든 뒤에만 html.anim 을 붙여 콘텐츠가 가려지지 않도록 함
+     ============================================================ */
+  function setFinalCount(el){
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var kind = el.getAttribute('data-format');
+    if(!el.firstChild || el.firstChild.nodeType !== 3) el.insertBefore(doc.createTextNode('0'), el.firstChild);
+    el.firstChild.nodeValue = (kind === 'comma') ? target.toLocaleString('en-US') : String(target);
+  }
+
+  guard('스크롤 등장 효과', function(){
+    var supported = ('IntersectionObserver' in window);
+
+    if(!supported || reduced){
+      qsa('.reveal').forEach(function(el){ el.classList.add('in'); });
+      qsa('[data-count]').forEach(setFinalCount);
+      return;
+    }
+
+    var revealIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); revealIO.unobserve(en.target); }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+
+    var countIO = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting) return;
+        var el = en.target;
+        countIO.unobserve(el);
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        var kind = el.getAttribute('data-format');
+        if(!el.firstChild || el.firstChild.nodeType !== 3) el.insertBefore(doc.createTextNode('0'), el.firstChild);
+        var start = Date.now(), dur = 1700;
+        (function tick(){
+          var p = Math.min(1, (Date.now() - start) / dur);
+          var v = Math.round(target * (1 - Math.pow(1 - p, 3)));
+          el.firstChild.nodeValue = (kind === 'comma') ? v.toLocaleString('en-US') : String(v);
+          if(p < 1) requestAnimationFrame(tick);
+        })();
+      });
+    }, {threshold:0.5});
+
+    // 관찰자가 준비된 뒤에만 숨김 클래스를 붙인다
+    doc.documentElement.classList.add('anim');
+    qsa('.reveal:not(.in)').forEach(function(el){ revealIO.observe(el); });
+    qsa('[data-count]').forEach(function(el){ countIO.observe(el); });
+  });
+
+  /* ============================================================
+     6. 최신 / 인기 영상 탭
+     ============================================================ */
+  guard('영상 탭', function(){
+    var tabs = qsa('.tab');
+    var latest = qs('#panel-latest');
+    var popular = qs('#panel-popular');
+    if(!tabs.length || !latest || !popular) return;
+
+    var panels = {latest: latest, popular: popular};
+
+    function showPanel(key){
+      tabs.forEach(function(t){
+        var on = t.getAttribute('data-tab') === key;
+        t.classList.toggle('is-active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+      });
+      Object.keys(panels).forEach(function(k){
+        var p = panels[k];
+        if(k === key){
+          p.hidden = false;
+          qsa('.vcard', p).forEach(function(c, i){
+            c.classList.add('reveal');
+            c.classList.remove('in');
+            setTimeout(function(){ c.classList.add('in'); }, reduced ? 0 : 70 * i);
+          });
+        } else {
+          p.hidden = true;
+        }
+      });
+    }
+
+    tabs.forEach(function(t, i){
+      t.addEventListener('click', function(){ showPanel(t.getAttribute('data-tab')); });
+      t.addEventListener('keydown', function(e){
+        if(e.key === 'ArrowRight' || e.key === 'ArrowLeft'){
+          e.preventDefault();
+          var next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+          next.focus();
+          showPanel(next.getAttribute('data-tab'));
+        }
+      });
+    });
+  });
+
+  /* ============================================================
+     7. 히어로 패럴랙스
+     ============================================================ */
+  guard('히어로 패럴랙스', function(){
+    if(reduced) return;
+    if(!window.matchMedia || !window.matchMedia('(min-width: 821px)').matches) return;
+
+    var hero = qs('.hero');
+    if(!hero) return;
+    var layers = qsa('.yarn, .needle, .hero__badge', hero);
+
+    hero.addEventListener('mousemove', function(e){
+      var r = hero.getBoundingClientRect();
+      if(!r.width || !r.height) return;
+      var x = (e.clientX - (r.left + r.width / 2)) / r.width;
+      var y = (e.clientY - (r.top + r.height / 2)) / r.height;
+      layers.forEach(function(el, i){
+        var d = (i + 1) * 7;
+        el.style.translate = (-x * d).toFixed(1) + 'px ' + (-y * d).toFixed(1) + 'px';
+      });
+    });
+  });
+
+  /* ============================================================
+     8. 전역 안전망 — 런타임 예외가 나면 숨겨진 콘텐츠를 모두 펼친다
+     ============================================================ */
+  window.addEventListener('error', function(){
+    try{
+      doc.documentElement.classList.remove('anim');
+      qsa('.reveal').forEach(function(el){ el.classList.add('in'); });
+    }catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
