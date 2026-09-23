@@ -353,6 +353,8 @@ section{scroll-margin-top:84px}
 .tab__count{font-family:var(--font-mono);font-size:.7rem;color:var(--ink-3);margin-left:.4rem}
 
 .vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,2.4vw,1.9rem)}
+/* .vgrid{display:grid} 가 UA [hidden]{display:none} 을 덮어써 두 목록이 겹쳐 보였음 → 명시적 규칙 필요 (noscript 폴백의 !important 규칙은 그대로 우선) */
+.vgrid[hidden]{display:none}
 .vcard{display:flex;flex-direction:column;gap:.95rem}
 .vcard__thumb{
   position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;
