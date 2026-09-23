@@ -334,7 +334,14 @@ section{scroll-margin-top:84px}
 @keyframes ring{0%{transform:scale(.9);opacity:.9}100%{transform:scale(1.25);opacity:0}}
 .feature:hover .playbtn,.vcard:hover .playbtn{transform:translate(-50%,-50%) scale(1.12);background:#fff}
 
-.tabs{display:flex;gap:.5rem;border-bottom:1px solid var(--line);margin-bottom:2.2rem;flex-wrap:wrap}
+.tabs{display:flex;gap:.5rem;border-bottom:1px solid var(--line);margin-bottom:1.1rem;flex-wrap:wrap}
+.tabs__note{
+  margin:0 0 2.2rem;font-family:var(--font-mono);font-size:.73rem;letter-spacing:.06em;
+  color:var(--ink-3);display:flex;align-items:center;gap:.6rem;
+}
+.tabs__note::before{content:"";width:22px;height:1.5px;background:var(--gold);flex:none}
+.tabs__note.is-changing{animation:noteIn .5s var(--ease)}
+@keyframes noteIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
 .tab{
   position:relative;padding:.85rem 1.15rem;font-size:.97rem;font-weight:600;color:var(--ink-3);
   transition:color .3s;
@@ -360,6 +367,13 @@ section{scroll-margin-top:84px}
   position:absolute;right:.6rem;bottom:.6rem;z-index:3;
   background:rgba(23,18,15,.82);color:#fff;font-family:var(--font-mono);font-size:.7rem;
   padding:.25rem .55rem;border-radius:6px;letter-spacing:.02em;backdrop-filter:blur(4px);
+}
+.vcard__rank{
+  position:absolute;left:.6rem;top:.6rem;z-index:3;
+  background:linear-gradient(135deg,var(--gold),#a4762a);color:#fff;
+  font-family:var(--font-mono);font-size:.66rem;letter-spacing:.16em;
+  padding:.3rem .62rem;border-radius:999px;
+  box-shadow:0 8px 18px -10px rgba(0,0,0,.8);
 }
 .vcard__shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(23,18,15,.5),transparent 45%);opacity:0;transition:opacity .5s}
 .vcard:hover .vcard__shade{opacity:1}
@@ -783,7 +797,7 @@ html.anim .reveal.in{opacity:1;transform:none}
         <h3>브리즈 케이블 볼레로<br>ㅣ 클래식 케이블 볼레로</h3>
         <p>요크 늘림부터 앞섶밴드, 리본끈과 단추홀까지. 케이블과 오픈워크가 어우러진 볼레로를 끝까지 함께 뜨는 영상입니다.</p>
         <div class="feature__meta">
-          <span>▶ 27,728회</span><span>♥ 460</span><span>CROCHET TUTORIAL</span>
+          <span>▶ 27,938회</span><span>♥ 461</span><span>CROCHET TUTORIAL</span>
         </div>
         <div class="feature__actions">
           <span class="btn btn--primary btn--sm">영상 재생하기
@@ -800,130 +814,137 @@ html.anim .reveal.in{opacity:1;transform:none}
       <button class="tab is-active" role="tab" id="tab-latest" aria-selected="true" aria-controls="panel-latest" data-tab="latest">최신 영상<span class="tab__count">6</span></button>
       <button class="tab" role="tab" id="tab-popular" aria-selected="false" aria-controls="panel-popular" data-tab="popular" tabindex="-1">인기 영상<span class="tab__count">6</span></button>
     </div>
+    <p class="tabs__note" id="tabNote" aria-live="polite">정렬 기준 · 최신순 — 유튜브 공식 RSS 피드 기준, 최신작 다음 6편</p>
 
     <!-- LATEST -->
     <div class="vgrid" id="panel-latest" role="tabpanel" aria-labelledby="tab-latest" data-panel="latest">
-      <a class="vcard reveal" href="https://www.youtube.com/watch?v=A8Efh4ZbfYc" target="_blank" rel="noopener" data-video="A8Efh4ZbfYc" data-title="사선밴드 메쉬 풀오버 ㅣ 시원한 여름 니트 뜨기">
+      <a class="vcard" href="https://www.youtube.com/watch?v=A8Efh4ZbfYc" target="_blank" rel="noopener" data-video="A8Efh4ZbfYc" data-title="사선밴드 메쉬 풀오버 | 시원한 여름 니트 뜨기 | Diagonal Band Mesh Pullover Crochet Tutorial">
         <div class="vcard__thumb">
-          <img src="https://i.ytimg.com/vi/A8Efh4ZbfYc/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/A8Efh4ZbfYc/hqdefault.jpg" alt="사선밴드 메쉬 풀오버 썸네일" loading="lazy" decoding="async">
+          <img src="https://i.ytimg.com/vi/A8Efh4ZbfYc/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/A8Efh4ZbfYc/hqdefault.jpg" alt="사선밴드 메쉬 풀오버 | 시원한 여름 니트 뜨기 | Diagonal Band Mesh Pullover Crochet Tutorial 썸네일" loading="lazy" decoding="async">
           <span class="vcard__shade"></span>
-          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
           <span class="vcard__views">1.7만회</span>
         </div>
-        <div><h3>사선밴드 메쉬 풀오버 ㅣ 시원한 여름 니트 뜨기</h3><p class="vcard__meta">2026.08.01 · 한 영상 끝까지</p></div>
+        <div><h3>사선밴드 메쉬 풀오버 | 시원한 여름 니트 뜨기 | Diagonal Band Mesh Pullover Crochet Tutorial</h3><p class="vcard__meta">2026.08.01 공개 · 영어도안</p></div>
       </a>
 
-      <a class="vcard reveal" style="--d:80ms" href="https://www.youtube.com/watch?v=qFXcmE8gWMk" target="_blank" rel="noopener" data-video="qFXcmE8gWMk" data-title="포켓 메쉬 베스트 ㅣ 가볍고 시원한 여름 코바늘 베스트">
+      <a class="vcard" href="https://www.youtube.com/watch?v=qFXcmE8gWMk" target="_blank" rel="noopener" data-video="qFXcmE8gWMk" data-title="포켓 메쉬 베스트 ㅣ가볍고 시원한 여름 코바늘 베스트">
         <div class="vcard__thumb">
-          <img src="https://i.ytimg.com/vi/qFXcmE8gWMk/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/qFXcmE8gWMk/hqdefault.jpg" alt="포켓 메쉬 베스트 썸네일" loading="lazy" decoding="async">
+          <img src="https://i.ytimg.com/vi/qFXcmE8gWMk/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/qFXcmE8gWMk/hqdefault.jpg" alt="포켓 메쉬 베스트 ㅣ가볍고 시원한 여름 코바늘 베스트 썸네일" loading="lazy" decoding="async">
           <span class="vcard__shade"></span>
-          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
           <span class="vcard__views">2.6만회</span>
         </div>
-        <div><h3>포켓 메쉬 베스트 ㅣ 가볍고 시원한 여름 코바늘 베스트</h3><p class="vcard__meta">2026.07.03 · EN 패턴 있음</p></div>
+        <div><h3>포켓 메쉬 베스트 ㅣ가볍고 시원한 여름 코바늘 베스트</h3><p class="vcard__meta">2026.07.03 공개 · 영어도안</p></div>
       </a>
 
-      <a class="vcard reveal" style="--d:160ms" href="https://www.youtube.com/watch?v=cW0whUuOan4" target="_blank" rel="noopener" data-video="cW0whUuOan4" data-title="레이스웨이브 가디건 뜨기 ㅣ 탑다운 여름 레이스 가디건">
+      <a class="vcard" href="https://www.youtube.com/watch?v=cW0whUuOan4" target="_blank" rel="noopener" data-video="cW0whUuOan4" data-title="레이스웨이브 가디간 뜨기 ㅣ탑다운으로 뜨는 시원한 여름 레이스 가디간">
         <div class="vcard__thumb">
-          <img src="https://i.ytimg.com/vi/cW0whUuOan4/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/cW0whUuOan4/hqdefault.jpg" alt="레이스웨이브 가디건 썸네일" loading="lazy" decoding="async">
+          <img src="https://i.ytimg.com/vi/cW0whUuOan4/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/cW0whUuOan4/hqdefault.jpg" alt="레이스웨이브 가디간 뜨기 ㅣ탑다운으로 뜨는 시원한 여름 레이스 가디간 썸네일" loading="lazy" decoding="async">
           <span class="vcard__shade"></span>
-          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          <span class="vcard__views">3.8만회</span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">3.9만회</span>
         </div>
-        <div><h3>레이스웨이브 가디건 뜨기 ㅣ 탑다운 여름 레이스 가디건</h3><p class="vcard__meta">2026.06.05 · Ravelry EN</p></div>
+        <div><h3>레이스웨이브 가디간 뜨기 ㅣ탑다운으로 뜨는 시원한 여름 레이스 가디간</h3><p class="vcard__meta">2026.06.05 공개 · 영어도안</p></div>
       </a>
 
-      <a class="vcard reveal" href="https://www.youtube.com/watch?v=4bxKbm1vpdc" target="_blank" rel="noopener" data-video="4bxKbm1vpdc" data-title="코지버블베스트 ㅣ 겨울 & 여름 버전">
+      <a class="vcard" href="https://www.youtube.com/watch?v=4bxKbm1vpdc" target="_blank" rel="noopener" data-video="4bxKbm1vpdc" data-title="코지버블베스트 ㅣ겨울&amp;여름 버전">
         <div class="vcard__thumb">
-          <img src="https://i.ytimg.com/vi/4bxKbm1vpdc/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/4bxKbm1vpdc/hqdefault.jpg" alt="코지버블베스트 썸네일" loading="lazy" decoding="async">
+          <img src="https://i.ytimg.com/vi/4bxKbm1vpdc/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/4bxKbm1vpdc/hqdefault.jpg" alt="코지버블베스트 ㅣ겨울&amp;여름 버전 썸네일" loading="lazy" decoding="async">
           <span class="vcard__shade"></span>
-          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
           <span class="vcard__views">1.8만회</span>
         </div>
-        <div><h3>코지버블베스트 ㅣ 겨울 &amp; 여름 버전</h3><p class="vcard__meta">2026.03.20 · 두 계절 버전</p></div>
+        <div><h3>코지버블베스트 ㅣ겨울&amp;여름 버전</h3><p class="vcard__meta">2026.03.20 공개 · 영어도안</p></div>
       </a>
 
-      <a class="vcard reveal" style="--d:80ms" href="https://www.youtube.com/watch?v=26Bffdq_SL8" target="_blank" rel="noopener" data-video="26Bffdq_SL8" data-title="아란숄카라가디건 뜨기 ㅣ 바늘공주">
+      <a class="vcard" href="https://www.youtube.com/watch?v=26Bffdq_SL8" target="_blank" rel="noopener" data-video="26Bffdq_SL8" data-title="아란숄카라가디간 뜨기 ㅣ 바늘공주">
         <div class="vcard__thumb">
-          <img src="https://i.ytimg.com/vi/26Bffdq_SL8/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/26Bffdq_SL8/hqdefault.jpg" alt="아란 숄카라 가디건 썸네일" loading="lazy" decoding="async">
+          <img src="https://i.ytimg.com/vi/26Bffdq_SL8/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/26Bffdq_SL8/hqdefault.jpg" alt="아란숄카라가디간 뜨기 ㅣ 바늘공주 썸네일" loading="lazy" decoding="async">
           <span class="vcard__shade"></span>
-          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
           <span class="vcard__views">4.4만회</span>
         </div>
-        <div><h3>아란숄카라가디건 뜨기 ㅣ 바늘공주</h3><p class="vcard__meta">2026.02.24 · 참고영상 13개</p></div>
+        <div><h3>아란숄카라가디간 뜨기 ㅣ 바늘공주</h3><p class="vcard__meta">2026.02.24 공개</p></div>
       </a>
 
-      <a class="vcard reveal" style="--d:160ms" href="https://www.youtube.com/watch?v=AXiRNuUl1s4" target="_blank" rel="noopener" data-video="AXiRNuUl1s4" data-title="쉽게 뜨는 폴라베스트 ㅣ 옆트임 (오픈형) 베스트">
+      <a class="vcard" href="https://www.youtube.com/watch?v=AXiRNuUl1s4" target="_blank" rel="noopener" data-video="AXiRNuUl1s4" data-title="쉽게 뜨는 폴라베스트 ㅣ옆트임 (오픈형)베스트">
         <div class="vcard__thumb">
-          <img src="https://i.ytimg.com/vi/AXiRNuUl1s4/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/AXiRNuUl1s4/hqdefault.jpg" alt="폴라베스트 썸네일" loading="lazy" decoding="async">
+          <img src="https://i.ytimg.com/vi/AXiRNuUl1s4/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/AXiRNuUl1s4/hqdefault.jpg" alt="쉽게 뜨는 폴라베스트 ㅣ옆트임 (오픈형)베스트 썸네일" loading="lazy" decoding="async">
           <span class="vcard__shade"></span>
-          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
           <span class="vcard__views">3.5만회</span>
         </div>
-        <div><h3>쉽게 뜨는 폴라베스트 ㅣ 옆트임 (오픈형) 베스트</h3><p class="vcard__meta">2026.01.13 · 초보 추천</p></div>
+        <div><h3>쉽게 뜨는 폴라베스트 ㅣ옆트임 (오픈형)베스트</h3><p class="vcard__meta">2026.01.13 공개</p></div>
       </a>
     </div>
 
     <!-- POPULAR -->
     <div class="vgrid" id="panel-popular" role="tabpanel" aria-labelledby="tab-popular" data-panel="popular" hidden>
-      <a class="vcard" href="https://www.youtube.com/watch?v=3q8XxZ14pkg" target="_blank" rel="noopener" data-video="3q8XxZ14pkg" data-title="꽃패턴 플레어 베스트 ㅣ 샤랄라 베스트 떠보세요">
+      <a class="vcard" href="https://www.youtube.com/watch?v=Nsj8b0v09Zg" target="_blank" rel="noopener" data-video="Nsj8b0v09Zg" data-title="[ENG]코바늘뜨기 탑다운 오픈조끼 /후딱 뜨는조끼 #1">
         <div class="vcard__thumb">
-          <img src="https://i.ytimg.com/vi/3q8XxZ14pkg/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/3q8XxZ14pkg/hqdefault.jpg" alt="꽃패턴 플레어 베스트 썸네일" loading="lazy" decoding="async">
+          <img src="https://i.ytimg.com/vi/Nsj8b0v09Zg/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/Nsj8b0v09Zg/hqdefault.jpg" alt="[ENG]코바늘뜨기 탑다운 오픈조끼 /후딱 뜨는조끼 #1 썸네일" loading="lazy" decoding="async">
           <span class="vcard__shade"></span>
-          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          <span class="vcard__views">8.5만회</span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">63만회</span>
+          <span class="vcard__rank">TOP 1</span>
         </div>
-        <div><h3>꽃패턴 플레어 베스트 ㅣ 샤랄라 베스트 떠보세요</h3><p class="vcard__meta">2025.02.14 · ♥ 1,370</p></div>
+        <div><h3>[ENG]코바늘뜨기 탑다운 오픈조끼 /후딱 뜨는조끼 #1</h3><p class="vcard__meta">인기 1위 · 5년 전 업로드</p></div>
       </a>
 
-      <a class="vcard" href="https://www.youtube.com/watch?v=ue3vxM0GGJs" target="_blank" rel="noopener" data-video="ue3vxM0GGJs" data-title="[ENG] 케이프 st 자켓뜨기 ㅣ 탑다운 자켓">
+      <a class="vcard" href="https://www.youtube.com/watch?v=SyKvRYjZAVI" target="_blank" rel="noopener" data-video="SyKvRYjZAVI" data-title="[ ENG ]명품 스타일 클러치백뜨기">
         <div class="vcard__thumb">
-          <img src="https://i.ytimg.com/vi/ue3vxM0GGJs/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/ue3vxM0GGJs/hqdefault.jpg" alt="케이프 스타일 자켓 썸네일" loading="lazy" decoding="async">
+          <img src="https://i.ytimg.com/vi/SyKvRYjZAVI/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/SyKvRYjZAVI/hqdefault.jpg" alt="[ ENG ]명품 스타일 클러치백뜨기 썸네일" loading="lazy" decoding="async">
           <span class="vcard__shade"></span>
-          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          <span class="vcard__views">7.7만회</span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">50만회</span>
+          <span class="vcard__rank">TOP 2</span>
         </div>
-        <div><h3>[ENG] 케이프 st 자켓뜨기 ㅣ 탑다운 자켓</h3><p class="vcard__meta">2025.12.11 · ♥ 1,428</p></div>
+        <div><h3>[ ENG ]명품 스타일 클러치백뜨기</h3><p class="vcard__meta">인기 2위 · 5년 전 업로드</p></div>
       </a>
 
-      <a class="vcard" href="https://www.youtube.com/watch?v=26Bffdq_SL8" target="_blank" rel="noopener" data-video="26Bffdq_SL8" data-title="아란숄카라가디건 뜨기 ㅣ 바늘공주">
+      <a class="vcard" href="https://www.youtube.com/watch?v=g8TeMnolPFI" target="_blank" rel="noopener" data-video="g8TeMnolPFI" data-title="뚝딱뚝딱 가디건뜨기 /Top-down crochet cardigan">
         <div class="vcard__thumb">
-          <img src="https://i.ytimg.com/vi/26Bffdq_SL8/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/26Bffdq_SL8/hqdefault.jpg" alt="아란 숄카라 가디건 썸네일" loading="lazy" decoding="async">
+          <img src="https://i.ytimg.com/vi/g8TeMnolPFI/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/g8TeMnolPFI/hqdefault.jpg" alt="뚝딱뚝딱 가디건뜨기 /Top-down crochet cardigan 썸네일" loading="lazy" decoding="async">
           <span class="vcard__shade"></span>
-          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          <span class="vcard__views">4.4만회</span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">49만회</span>
+          <span class="vcard__rank">TOP 3</span>
         </div>
-        <div><h3>아란숄카라가디건 뜨기 ㅣ 바늘공주</h3><p class="vcard__meta">2026.02.24 · ♥ 849</p></div>
+        <div><h3>뚝딱뚝딱 가디건뜨기 /Top-down crochet cardigan</h3><p class="vcard__meta">인기 3위 · 6년 전 업로드</p></div>
       </a>
 
-      <a class="vcard" href="https://www.youtube.com/watch?v=LRhWvWvy1CM" target="_blank" rel="noopener" data-video="LRhWvWvy1CM" data-title="크로쉐 가디건 뜨기 ㅣ 무봉제 가디건">
+      <a class="vcard" href="https://www.youtube.com/watch?v=g5fCoYqleOA" target="_blank" rel="noopener" data-video="g5fCoYqleOA" data-title="기본뜨기조끼  /탑다운 코바늘 조끼">
         <div class="vcard__thumb">
-          <img src="https://i.ytimg.com/vi/LRhWvWvy1CM/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/LRhWvWvy1CM/hqdefault.jpg" alt="크로쉐 무봉제 가디건 썸네일" loading="lazy" decoding="async">
+          <img src="https://i.ytimg.com/vi/g5fCoYqleOA/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/g5fCoYqleOA/hqdefault.jpg" alt="기본뜨기조끼  /탑다운 코바늘 조끼 썸네일" loading="lazy" decoding="async">
           <span class="vcard__shade"></span>
-          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          <span class="vcard__views">4.2만회</span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">44만회</span>
+          <span class="vcard__rank">TOP 4</span>
         </div>
-        <div><h3>크로쉐 가디건 뜨기 ㅣ 무봉제 가디건</h3><p class="vcard__meta">2025.10.30 · ♥ 785</p></div>
+        <div><h3>기본뜨기조끼  /탑다운 코바늘 조끼</h3><p class="vcard__meta">인기 4위 · 6년 전 업로드</p></div>
       </a>
 
-      <a class="vcard" href="https://www.youtube.com/watch?v=8dqJ24yEo5I" target="_blank" rel="noopener" data-video="8dqJ24yEo5I" data-title="뒤트임 뷔스티에 ㅣ 초보뜨개 ㅣ 옷만들기">
+      <a class="vcard" href="https://www.youtube.com/watch?v=V7Of1lh8GSw" target="_blank" rel="noopener" data-video="V7Of1lh8GSw" data-title="[ENG]후드가디간 이제 탑다운뜨기로 쉽게 떠보세요 ㅣ사이즈 free의 박시한 스타일의 가디간">
         <div class="vcard__thumb">
-          <img src="https://i.ytimg.com/vi/8dqJ24yEo5I/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/8dqJ24yEo5I/hqdefault.jpg" alt="뒤트임 뷔스티에 썸네일" loading="lazy" decoding="async">
+          <img src="https://i.ytimg.com/vi/V7Of1lh8GSw/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/V7Of1lh8GSw/hqdefault.jpg" alt="[ENG]후드가디간 이제 탑다운뜨기로 쉽게 떠보세요 ㅣ사이즈 free의 박시한 스타일의 가디간 썸네일" loading="lazy" decoding="async">
           <span class="vcard__shade"></span>
-          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          <span class="vcard__views">3.7만회</span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">36만회</span>
+          <span class="vcard__rank">TOP 5</span>
         </div>
-        <div><h3>🧶 뒤트임 뷔스티에 ㅣ 초보뜨개 ㅣ 옷만들기</h3><p class="vcard__meta">2025.10.01 · ♥ 560</p></div>
+        <div><h3>[ENG]후드가디간 이제 탑다운뜨기로 쉽게 떠보세요 ㅣ사이즈 free의 박시한 스타일의 가디간</h3><p class="vcard__meta">인기 5위 · 3년 전 업로드</p></div>
       </a>
 
-      <a class="vcard" href="https://www.youtube.com/watch?v=we836WAen00" target="_blank" rel="noopener" data-video="we836WAen00" data-title="노밴드 라인자켓 뜨기 ㅣ 아웃포켓뜨기">
+      <a class="vcard" href="https://www.youtube.com/watch?v=-1zQsnpOI64" target="_blank" rel="noopener" data-video="-1zQsnpOI64" data-title="V-cut 클러치백 뜨기/클러치겸 숄더크로스백뜨기">
         <div class="vcard__thumb">
-          <img src="https://i.ytimg.com/vi/we836WAen00/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/we836WAen00/hqdefault.jpg" alt="노밴드 라인자켓 썸네일" loading="lazy" decoding="async">
+          <img src="https://i.ytimg.com/vi/-1zQsnpOI64/maxresdefault.jpg" data-fallback="https://i.ytimg.com/vi/-1zQsnpOI64/hqdefault.jpg" alt="V-cut 클러치백 뜨기/클러치겸 숄더크로스백뜨기 썸네일" loading="lazy" decoding="async">
           <span class="vcard__shade"></span>
-          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
-          <span class="vcard__views">3.0만회</span>
+          <span class="playbtn" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="vcard__views">33만회</span>
+          <span class="vcard__rank">TOP 6</span>
         </div>
-        <div><h3>노밴드 라인자켓 뜨기 ㅣ 아웃포켓뜨기</h3><p class="vcard__meta">2024.12.27 · ♥ 563</p></div>
+        <div><h3>V-cut 클러치백 뜨기/클러치겸 숄더크로스백뜨기</h3><p class="vcard__meta">인기 6위 · 6년 전 업로드</p></div>
       </a>
     </div>
   </div>
@@ -1347,6 +1368,18 @@ html.anim .reveal.in{opacity:1;transform:none}
         t.setAttribute('aria-selected', on ? 'true' : 'false');
         t.tabIndex = on ? 0 : -1;
       });
+
+      // 정렬 기준 안내문 갱신 — 탭 전환이 확실히 느껴지도록
+      var note = qs('#tabNote');
+      if(note){
+        note.textContent = (key === 'popular')
+          ? '정렬 기준 · 인기순 — 채널 전체 영상 중 조회수 상위 6편'
+          : '정렬 기준 · 최신순 — 유튜브 공식 RSS 피드 기준, 최신작 다음 6편';
+        note.classList.remove('is-changing');
+        void note.offsetWidth;
+        note.classList.add('is-changing');
+      }
+
       Object.keys(panels).forEach(function(k){
         var p = panels[k];
         if(k === key){
